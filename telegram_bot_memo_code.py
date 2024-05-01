@@ -1,6 +1,4 @@
 
-
-
 @bot.message_handler(commands=['help', 'start'])
 def send_welcome(message):
     start_private_msg = ' welcome to private chat'
@@ -8,8 +6,8 @@ def send_welcome(message):
     start_supergroup_msg = f' welcome to our {message.chat.title} chat'
     help_supergroup_msg = 'how help you?'
     if message.chat.type == 'supergroup':
-        start_command = '/start'+'@MrMemosBot'
-        help_command = '/help'+'@MrMemosBot'
+        start_command = '/start'+'@nameOFBot'
+        help_command = '/help'+'@nameOFBot'
         if message.text == start_command:
             bot.reply_to(message, start_supergroup_msg)
         elif message.text == help_command:
